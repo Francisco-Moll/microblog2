@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../mb_css/header.css">
+    <link rel="stylesheet" href="../mb_css/gen_styles.css">
+    <link rel="stylesheet" href="../mb_css/signup.css">
+
+    <script src="../mb_js/auth.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../mb_images/sfc_logo.png" alt="logo">
+                <div id="header_text">
+                    <h1><a href="../mb_pages/posts.html">SuperZine</a></h1>
+                </div>
+            </div>
+            <ul>
+                <li><a href="../mb_pages/about.html">About</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </nav>
+        <div class="menubar">
+            <ul>
+                <li><a href="../mb_pages/about.html">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <form class="signup">
+            <div class="signup-screen">
+                <div class="app-title">
+                    <h1>Sign Up</h1>
+                </div>
+
+                <div class="signup-form">
+                    <div class="control-group">
+                        <input type="text" class="login-field" placeholder="full name" id="fullname" required>
+                        <label for="signup-fullname"></label>
+                    </div>
+
+                    <div class="control-group">
+                        <input type="text" class="login-field" placeholder="username" id="username" required>
+                        <label for="signup-name"></label>
+                    </div>
+
+                    <div class="control-group">
+                        <input type="password" class="login-field" placeholder="password" id="password" required>
+                        <label for="signup-pass"></label>
+                    </div>
+
+                    <div class="control-group">
+                        <input type="password" class="login-field" placeholder="confirm password" id="conf_password" required>
+                        <label for="signup-confpass"></label>
+                    </div>
+
+                    <button class="btn" id="signupButton" type="submit">Register</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="../mb_js/signup.js"></script>
+    <script src="../mb_js/hamburger.js"></script>
+</body>
+
+</html>

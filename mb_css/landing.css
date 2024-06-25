@@ -1,0 +1,118 @@
+body {
+    font-family: 'Lucida Console', monospace;
+}
+
+.desktop {
+    display: show;
+}
+
+.mobile {
+    display: none;
+}
+
+.toptxt {
+    display: flex;
+    justify-content: center;
+}
+
+.toptxt h1 a {
+    text-decoration: none;
+    color: #b5b6e4;
+}
+
+.toptxt:hover {
+    animation: bounce 0.5s;
+}
+
+.logo {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#superzine {
+    width: 500px;
+}
+
+.spacer {
+    height: 40px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    background-color: #cec9cc;
+    font-size: 95%;
+    font-weight: 400;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #908a99;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    .logo {
+        margin-top: 75px;
+        margin-left: -180px;
+    }
+
+    .bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .joinbtn {
+        margin-bottom: 10px;
+    }
+
+    .loginbtn {
+        margin-top: 10px;
+    }
+}
