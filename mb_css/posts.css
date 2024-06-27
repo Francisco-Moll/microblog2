@@ -18,5 +18,12 @@
 .hblock {
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1px
+    padding: 15px
+}
+
+.message_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

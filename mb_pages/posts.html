@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
         if (isLoggedIn() === false) window.location.replace("../mb_index.hmtl");
     </script>
 </head>
+
 <body>
     <header>
         <nav>
@@ -39,17 +41,29 @@
     </header>
     <main>
         <section>
-            <div class="post_menu">
-                
+            <div class="feed_header hblock">
+                <h1></h1>
+            </div>
+        </section>
+        <section>
+            <div class="post block message_text">
+                <div class="textbox">
+                    <textarea id="message" rows="4" cols="85"></textarea>
+                </div>
+                <div class="submitbutton">
+                    <input type="submit" value="P O S T">
+                </div>
             </div>
         </section>
         <section>
             <div class="feed_header hblock">
-                <h1>F E E D</h1>
+                <h1></h1>
             </div>
         </section>
         <section id="posts">
-            <!-- Post Here -->
+            <div>
+                <!-- Post Here -->
+            </div>
         </section>
     </main>
     <footer>
@@ -58,4 +72,5 @@
     <script src="../mb_js/posts.js"></script>
     <script src="../mb_js/hamburger.js"></script>
 </body>
+
 </html>
