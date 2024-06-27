@@ -1,0 +1,22 @@
+.post {
+    margin: 5px;
+}
+
+.block {
+    background-color: #cec9cc;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px
+}
+
+.feed_header {
+    text-align: center;
+    background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
+    margin: 5px;
+}
+
+.hblock {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1px
+}

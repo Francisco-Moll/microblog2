@@ -14,6 +14,7 @@ function isLoggedIn() {
     return Boolean(loginData.token);
 }
 
+// Login Existing User
 function login(loginData) {
     const options = {
         method: "POST",
@@ -50,16 +51,18 @@ function displayLoginError(message) {
     }
 }
 
+//Register User
 function registerUser(signupData) {
     const options = {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
+            "accept": "application/json",
         },
         body: JSON.stringify(signupData),
     };
 
-    return fetch(apiBaseURL + "/auth/register", options)
+    return fetch(apiBaseURL + "/api/users", options)
         .then(response => response.json())
         .then(registerData => {
             if (registerData.hasOwnProperty("message")) {
@@ -69,6 +72,10 @@ function registerUser(signupData) {
             }
 
             console.log("User registered successfully:", registerData);
+
+            window.localStorage.setItem("login-data", JSON.stringify(registerData));
+            window.location.assign("../mb_pages/posts.html"); // redirect
+
             return registerData;
         })
         .catch(error => {
