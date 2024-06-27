@@ -6,7 +6,7 @@
     background-color: #cec9cc;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px
+    padding: 20px;
 }
 
 .feed_header {
@@ -26,4 +26,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+textarea {
+    width: 100%;
 }
