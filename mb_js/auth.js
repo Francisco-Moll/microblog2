@@ -99,11 +99,7 @@ function logout () {
     const options = { 
         method: "GET",
         headers: { 
-            // This header is how we authenticate our user with the
-            // server for any API requests which require the user
-            // to be logged-in in order to have access.
-            // In the API docs, these endpoints display a lock icon.
-            Authorization: `Bearer ${loginData.token}`,
+            "Authorization": `Bearer ${loginData.token}`,
         },
     };
 
@@ -111,21 +107,20 @@ function logout () {
         .then(response => response.json())
         .then(data => console.log(data))
         .finally(() => {
-            // We're using `finally()` so that we will continue with the
-            // browser side of logging out (below) even if there is an 
-            // error with the fetch request above.
-
             window.localStorage.removeItem("login-data");  // remove login data from LocalStorage
             window.location.assign("../mb_index.html");  // redirect back to landing page
         });
 }
 
-// Add logout button if user is logged in
+// Add button if user is logged in
 document.addEventListener("DOMContentLoaded", function () {
     if (isLoggedIn()) {
         const nav = document.querySelector("nav ul");
         const logoutButton = document.createElement("li");
+        const accountButton = document.createElement("li");
         logoutButton.innerHTML = '<a href="../mb_index.html" id="logoutButton">Logout</a>';
+        accountButton.innerHTML = '<a href="../mb_pages/account.html" id="accountButton">Account</a>';
+        nav.appendChild(accountButton);
         nav.appendChild(logoutButton);
 
         document.getElementById("logoutButton").addEventListener("click", function (event) {
@@ -136,7 +131,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isLoggedIn()) {
         const nav = document.querySelector(".menubar ul");
         const logoutButton = document.createElement("li");
+        const accountButton = document.createElement("li");
         logoutButton.innerHTML = '<a href="../mb_index.html" id="logoutButton">Logout</a>';
+        accountButton.innerHTML = '<a href="../mb_pages/account.html" id="accountButton">Account</a>';
+        nav.appendChild(accountButton);
         nav.appendChild(logoutButton);
 
         document.getElementById("logoutButton").addEventListener("click", function (event) {

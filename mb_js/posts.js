@@ -27,12 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     const currentUserLike = post.likes.find(like => like.username === loginData.username);
                     const hasLike = currentUserLike ? true : false;
                     const likeId = currentUserLike ? currentUserLike._id : "";
-                    
+
                     const postElement = document.createElement("div");
                     postElement.className = "post";
                     postElement.innerHTML = `
                     <div class="block">
-                        <h2><a href="../mb_pages/profile.html?${post.username}">${post.username}</a></h2>
+                        <h2><a href="../mb_pages/profile.html?username=${post.username}">${post.username}</a></h2>
                         <p>${post.text}</p>
                         <button class="like-button" data-post-id="${post._id}" data-has-like="${hasLike}" data-like-id="${likeId}">Like (${post.likes.length})</button>
                     </div>

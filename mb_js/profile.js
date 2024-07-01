@@ -9,7 +9,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         const profile = await fetchProfileDetails(username);
         displayProfileDetails(profile);
     } else {
-        profileDetails.innerHTML = "<p>No username provided in URL.</p>";
+        profileDetails.innerHTML = `
+        <div class=" block error">
+            <p>No username provided in URL.</p>
+        </div>    
+        `;
     }
 
     async function fetchProfileDetails(username) {

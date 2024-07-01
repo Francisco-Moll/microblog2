@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="../mb_css/header.css">
+    <title>Account</title>
     <link rel="stylesheet" href="../mb_css/gen_styles.css">
-    <link rel="stylesheet" href="../mb_css/posts.css">
+    <link rel="stylesheet" href="../mb_css/header.css">
+    <link rel="stylesheet" href="../mb_css/account.css">
 
     <script src="../mb_js/auth.js"></script>
     <script>
@@ -40,37 +40,40 @@
         </div>
     </header>
     <main>
-        <section>
-            <div class="feed_header hblock">
-                <h1>P O S T</h1>
-            </div>
-        </section>
-        <section>
-            <div class="post block message_text">
-                <div class="textbox">
-                    <textarea id="message" rows="4" cols="10000"></textarea>
+        <div class="header_text block">
+            <h1>Edit Profile</h1>
+        </div>
+        <div class="editor block">
+            <form id="editProfileForm">
+                <div class="editorcontainer">
+                    <div class="name_edit">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName">
+                    </div>
+
+                    <div class="bio_edit">
+                        <label for="bio">Bio:</label>
+                        <textarea id="bio" name="bio" rows="4" cols="10000"></textarea>
+                    </div>
+
+                    <div class="pass_edit">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+
+                    <div class="update_button">
+                        <button type="submit" id="updateButton">Update</button>
+                    </div>
                 </div>
-                <div class="submitbutton">
-                    <input type="submit" value="P O S T">
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="feed_header hblock">
-                <h1>F E E D</h1>
-            </div>
-        </section>
-        <section id="posts">
-            <div>
-                <!-- Post Here -->
-            </div>
-        </section>
+
+            </form>
+        </div>
     </main>
     <footer>
 
     </footer>
-    <script src="../mb_js/posts.js"></script>
     <script src="../mb_js/hamburger.js"></script>
+    <script src="../mb_js/account.js"></script>
 </body>
 
 </html>

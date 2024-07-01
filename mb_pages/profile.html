@@ -4,14 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
+    <link rel="stylesheet" href="../mb_css/gen_styles.css">
+    <link rel="stylesheet" href="../mb_css/header.css">
+    <link rel="stylesheet" href="../mb_css/profile.css">
 
     <script src="../mb_js/auth.js"></script>
+    <script>
+        if (isLoggedIn() === false) window.location.replace("../mb_index.html");
+    </script>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../mb_images/sfc_logo.png" alt="logo">
+                <div id="header_text">
+                    <h1><a href="../mb_pages/posts.html">SuperZine</a></h1>
+                </div>
+            </div>
+            <ul>
+                <li><a href="../mb_pages/about.html">About</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </nav>
+        <div class="menubar">
+            <ul>
+                <li><a href="../mb_pages/about.html">About</a></li>
+            </ul>
+        </div>
+    </header>
     <div id="profileDetails">
         <!-- Display via js -->
     </div>
 
+    <script src="../mb_js/hamburger.js"></script>
     <script src="../mb_js/profile.js"></script>
 </body>
 </html>

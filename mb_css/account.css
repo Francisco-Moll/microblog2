@@ -1,0 +1,36 @@
+.block {
+    background-color: #cec9cc;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+}
+
+.header_text {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
+}
+
+textarea {
+    width: 100%;
+}
+
+.update_button {
+    border: 2px solid transparent;
+    background: #b5b6e4;
+    color: #211a21;
+    text-decoration: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 0.25s;
+    width: 25%;
+}
+
+button {
+    width: 100%;
+}
+
+.update_button:hover {
+    background-color: #4f43ae;
+}

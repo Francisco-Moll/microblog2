@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="../mb_css/signup.css">
 
     <script src="../mb_js/auth.js"></script>
+    <script>
+        if (isLoggedIn() === true) window.location.replace("../mb_pages/posts.html");
+    </script>
 </head>
 
 <body>
@@ -69,6 +72,7 @@
 
                     <button class="btn" id="signupButton" type="submit">Register</button>
                 </div>
+                <div id="error-message"></div>
             </div>
         </form>
     </main>

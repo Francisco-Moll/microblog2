@@ -59,3 +59,8 @@ input:focus {
 .btn:hover {
     background-color: #4f43ae;
 }
+
+#error-message {
+    text-align: center;
+    color: #e15d5d;
+}
